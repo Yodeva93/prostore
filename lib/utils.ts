@@ -24,7 +24,7 @@ export function formatNumberWithDecimal(num: number): string {
 
 
 
-export async function formatError(error: any) {
+export async function formatError(error: string) {
   if(error.name === 'ZodError') {
     const fieldErrors = Object.keys(error.errors).map((field) => error.errors[field].message);
     
